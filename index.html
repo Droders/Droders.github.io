@@ -4,10 +4,11 @@
     <title>ЛОЛ</title>
   </head>
   <body>
+    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+
     <script>
-      $.getJSON('https://json.geoiplookup.io/api?callback=?', function(data) {
-        console.log(data.ip);
-      });
+      // Sends event to client
+      vkBridge.send('VKWebAppInit');
     </script>
   </body>
 </html
