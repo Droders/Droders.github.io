@@ -4,10 +4,10 @@
     <title>ЛОЛ</title>
   </head>
   <body>
-    <script>fetch('https://ipapi.co/json/')
-      .then(d => d.json())
-      .then(d => document.querySelector('#ip').innerHTML = d.ip);
+    <script>
+      $.getJSON('https://json.geoiplookup.io/api?callback=?', function(data) {
+        console.log(data.ip);
+      });
     </script>
-    <div id="ip"></div>
   </body>
 </html
