@@ -6,10 +6,11 @@
   <body>
     <h1>lol</h1>
     <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
-
     <script>
+      import bridge from '@vkontakte/vk-bridge';
+
       // Sends event to client
-      vkBridge.send('VKWebAppInit');
+      bridge.send('VKWebAppInit');
       
 
       
