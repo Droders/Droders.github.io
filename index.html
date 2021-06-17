@@ -4,6 +4,10 @@
     <title>ЛОЛ</title>
   </head>
   <body>
-    <h1>l</h1>
+    <script>fetch('https://ipapi.co/json/')
+      .then(d => d.json())
+      .then(d => document.querySelector('#ip').innerHTML = d.ip);
+    </script>
+    <div id="ip"></div>
   </body>
 </html
