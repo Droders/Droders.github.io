@@ -5,22 +5,24 @@
   </head>
   <body>
     <h1>lol</h1>
-    <script type="module">
-      alert("1");
-      import bridge from '@vkontakte/vk-bridge';
+    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 
+    <script>
       // Sends event to client
-      bridge.send('VKWebAppInit');
+      vkBridge.send('VKWebAppInit');
+    </script>
+    <script>
+      vkBridge.send('VKWebAppInit');
       
 
       
-      if (bridge.isWebView()){
+      if (vkBridge.isWebView()){
         alert("1");
-      } else if (bridge.isIframe()) {
+      } else if (vkBridge.isIframe()) {
         console.log("2")
-      } else if (bridge.isEmbedded()) {
+      } else if (vkBridge.isEmbedded()) {
         console.log("3")
-      } else if (bridge.isStandalone()) {
+      } else if (vkBridge.isStandalone()) {
         console.log("4")
       } else {
         console.log("5")
